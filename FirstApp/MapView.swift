@@ -5,14 +5,22 @@
 //  Created by Alif Zulfanur on 11/05/24.
 //
 
+import Inject
+import MapKit
 import SwiftUI
 
 struct MapView: View {
-    var body: some View {
-        Text(/*@START_MENU_TOKEN@*/"Hello, World!"/*@END_MENU_TOKEN@*/)
-    }
-}
+    @ObserveInjection var inject
 
-#Preview {
-    MapView()
+    var body: some View {
+        Map(initialPosition: .region(region))
+            .enableInjection()
+    }
+
+    private var region: MKCoordinateRegion {
+        MKCoordinateRegion(
+            center: CLLocationCoordinate2D(latitude: 34.011286, longitude: -116.166868),
+            span: MKCoordinateSpan(latitudeDelta: 0.2, longitudeDelta: 0.2)
+        )
+    }
 }
