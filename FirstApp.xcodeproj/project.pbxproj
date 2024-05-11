@@ -15,6 +15,7 @@
 		2A6E61F52BEF2898007AECEE /* FirstAppUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A6E61F42BEF2898007AECEE /* FirstAppUITestsLaunchTests.swift */; };
 		2AB177572BEF455400BDAB45 /* Inject in Frameworks */ = {isa = PBXBuildFile; productRef = 2AB177562BEF455400BDAB45 /* Inject */; };
 		2AB1775B2BEF51F000BDAB45 /* MapView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2AB1775A2BEF51F000BDAB45 /* MapView.swift */; };
+		2AF5900A2BF02A6C00F5D1BC /* RegisterView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2AF590092BF02A6C00F5D1BC /* RegisterView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -45,6 +46,7 @@
 		2A6E61F22BEF2898007AECEE /* FirstAppUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirstAppUITests.swift; sourceTree = "<group>"; };
 		2A6E61F42BEF2898007AECEE /* FirstAppUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirstAppUITestsLaunchTests.swift; sourceTree = "<group>"; };
 		2AB1775A2BEF51F000BDAB45 /* MapView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapView.swift; sourceTree = "<group>"; };
+		2AF590092BF02A6C00F5D1BC /* RegisterView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -100,6 +102,7 @@
 				2A6E61D92BEF2897007AECEE /* ContentView.swift */,
 				2A6E61DB2BEF2898007AECEE /* Assets.xcassets */,
 				2AB1775A2BEF51F000BDAB45 /* MapView.swift */,
+				2AF590092BF02A6C00F5D1BC /* RegisterView.swift */,
 			);
 			path = FirstApp;
 			sourceTree = "<group>";
@@ -257,6 +260,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				2A6E61DA2BEF2897007AECEE /* ContentView.swift in Sources */,
+				2AF5900A2BF02A6C00F5D1BC /* RegisterView.swift in Sources */,
 				2AB1775B2BEF51F000BDAB45 /* MapView.swift in Sources */,
 				2A6E61D82BEF2897007AECEE /* FirstAppApp.swift in Sources */,
 			);
