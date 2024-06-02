@@ -5,29 +5,22 @@
 //  Created by Alif Zulfanur on 12/05/24.
 //
 
-import Inject
 import SwiftUI
 
 struct LoginView: View {
-    @ObserveInjection var inject
-
     @State private var username: String = ""
     @State private var password: String = ""
+    @State private var isLoginClicked: Bool = false
 
     @Environment(\.colorScheme) var colorScheme
     @Environment(\.presentationMode) var presentationMode: Binding<PresentationMode>
 
     var body: some View {
-        ScrollView(content: {
-            VStack(content: {
-                Image("imgLogin")
-                    .resizable()
-                    .aspectRatio(contentMode: .fit)
-                    .padding()
-                    .frame(width: 200, height: 200)
-                    .edgesIgnoringSafeArea(/*@START_MENU_TOKEN@*/ .all/*@END_MENU_TOKEN@*/)
-
-                Text("Welcome Back").padding(.bottom, 15)
+        NavigationView {
+            VStack(alignment: .leading, content: {
+                Text("Masukan username dan password untuk menggunakan aplikasi dokter Rumah Sakit Roemani")
+                    .font(.system(size: 14))
+                    .padding(.vertical, 8)
 
                 TextField(
                     "Username",
@@ -45,30 +38,29 @@ struct LoginView: View {
                 .autocapitalization(/*@START_MENU_TOKEN@*/ .none/*@END_MENU_TOKEN@*/)
                 .padding(.bottom, 10)
 
-                Button(action: {}) {
-                    Text("Login")
+                Button(action: {
+                    isLoginClicked = true
+                    print("cokk jancok \(isLoginClicked)")
+                }) {
+                    Text("Masuk")
                         .frame(maxWidth: /*@START_MENU_TOKEN@*/ .infinity/*@END_MENU_TOKEN@*/)
-                        .padding(.all, 8)
+                        .padding(.all, 6)
                         .fontWeight(.regular)
-                        .font(.system(size: 14))
-                        .foregroundColor(colorScheme == .dark ? .black : .white)
-                        .background(.white)
-                        .cornerRadius(8)
+                        .foregroundColor(.white)
                 }
-
-                HStack(content: {
-                    Spacer()
-                    Text("Dont't Have An Account ?").font(.system(size: 12))
-                    Button(action: {
-                        self.presentationMode.wrappedValue.dismiss()
-                    }) {
-                        Text("Register").font(.system(size: 12))
-                    }
-                }).padding(.vertical, 8)
-
+                .background(.purple)
+                .cornerRadius(10)
+                Spacer()
+                NavigationLink(
+                    destination: HomeView().navigationBarBackButtonHidden(true),
+                    isActive: $isLoginClicked,
+                    label: { EmptyView() }
+                )
+                .hidden()
             })
-        }).preferredColorScheme(/*@START_MENU_TOKEN@*/ .dark/*@END_MENU_TOKEN@*/)
+            .foregroundColor(Color.black.opacity(0.7))
             .padding()
-            .enableInjection()
+            .navigationTitle("Masuk")
+        }
     }
 }

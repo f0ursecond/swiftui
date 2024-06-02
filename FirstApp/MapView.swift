@@ -5,16 +5,12 @@
 //  Created by Alif Zulfanur on 11/05/24.
 //
 
-import Inject
 import MapKit
 import SwiftUI
 
 struct MapView: View {
-    @ObserveInjection var inject
-
     var body: some View {
         Map(initialPosition: .region(region))
-            .enableInjection()
     }
 
     private var region: MKCoordinateRegion {

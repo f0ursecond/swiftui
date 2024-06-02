@@ -5,12 +5,9 @@
 //  Created by Alif Zulfanur on 11/05/24.
 //
 
-import Inject
 import SwiftUI
 
 struct RegisterView: View {
-    @ObserveInjection var inject
-
     @State private var username: String = ""
     @State private var email: String = ""
     @State private var password: String = ""
@@ -63,8 +60,7 @@ struct RegisterView: View {
                         .padding(.all, 8)
                         .fontWeight(.regular)
                         .font(.system(size: 14))
-                        .foregroundColor(colorScheme == .dark ? .black : .white)
-                        .background(backgroundColor)
+                        .foregroundColor(.white)
                         .cornerRadius(12)
                 }
                 HStack(content: {
@@ -78,19 +74,15 @@ struct RegisterView: View {
                 }).padding(.vertical, 8)
 
                 NavigationLink(
-                    destination: LoginView().navigationBarBackButtonHidden(true),
+                    destination: HomeView().navigationBarBackButtonHidden(true),
                     isActive: self.$isLoginButtonClicked,
                     label: { EmptyView() }
                 )
                 .hidden()
-                .navigationTitle("")
-                .navigationBarBackButtonHidden(true)
 
             })
             .padding()
-            .enableInjection()
         }
-        .preferredColorScheme(/*@START_MENU_TOKEN@*/ .dark/*@END_MENU_TOKEN@*/)
         .alert(isPresented: $showAlert, content: {
             if self.showAlertSuccess {
                 Alert(
@@ -109,7 +101,6 @@ struct RegisterView: View {
                     })
                 )
             }
-
         })
     }
 

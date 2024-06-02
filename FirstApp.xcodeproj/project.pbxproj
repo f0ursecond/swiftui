@@ -7,15 +7,27 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		2A1502BD2BFA4F2E00F4AD0D /* ColorExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A1502BC2BFA4F2E00F4AD0D /* ColorExtension.swift */; };
+		2A1502C12BFA5B0800F4AD0D /* NavigationBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A1502C02BFA5B0800F4AD0D /* NavigationBar.swift */; };
+		2A3302A62BF9F9EB00AE8EE8 /* HomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A3302A52BF9F9EB00AE8EE8 /* HomeView.swift */; };
 		2A6E61D82BEF2897007AECEE /* FirstAppApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A6E61D72BEF2897007AECEE /* FirstAppApp.swift */; };
-		2A6E61DA2BEF2897007AECEE /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A6E61D92BEF2897007AECEE /* ContentView.swift */; };
+		2A6E61DA2BEF2897007AECEE /* RegisterView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A6E61D92BEF2897007AECEE /* RegisterView.swift */; };
 		2A6E61DC2BEF2898007AECEE /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 2A6E61DB2BEF2898007AECEE /* Assets.xcassets */; };
 		2A6E61E92BEF2898007AECEE /* FirstAppTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A6E61E82BEF2898007AECEE /* FirstAppTests.swift */; };
 		2A6E61F32BEF2898007AECEE /* FirstAppUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A6E61F22BEF2898007AECEE /* FirstAppUITests.swift */; };
 		2A6E61F52BEF2898007AECEE /* FirstAppUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A6E61F42BEF2898007AECEE /* FirstAppUITestsLaunchTests.swift */; };
 		2AB177572BEF455400BDAB45 /* Inject in Frameworks */ = {isa = PBXBuildFile; productRef = 2AB177562BEF455400BDAB45 /* Inject */; };
 		2AB1775B2BEF51F000BDAB45 /* MapView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2AB1775A2BEF51F000BDAB45 /* MapView.swift */; };
-		2AF5900A2BF02A6C00F5D1BC /* RegisterView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2AF590092BF02A6C00F5D1BC /* RegisterView.swift */; };
+		2ABF26872BF08A0300E167F2 /* SwiftSVG in Frameworks */ = {isa = PBXBuildFile; productRef = 2ABF26862BF08A0300E167F2 /* SwiftSVG */; };
+		2ACE55B12C037A880055A5E3 /* PresenceItemWidget.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2ACE55B02C037A880055A5E3 /* PresenceItemWidget.swift */; };
+		2AF5343B2C02DD0C00464D4D /* AttendanceWidget.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2AF5343A2C02DD0C00464D4D /* AttendanceWidget.swift */; };
+		2AF5900A2BF02A6C00F5D1BC /* LoginView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2AF590092BF02A6C00F5D1BC /* LoginView.swift */; };
+		2AFE8CD12C0297EB006DF51D /* PresenceView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2AFE8CD02C0297EB006DF51D /* PresenceView.swift */; };
+		2AFE8CD42C02981C006DF51D /* OperationScheduleView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2AFE8CD32C02981C006DF51D /* OperationScheduleView.swift */; };
+		2AFE8CD72C0298AC006DF51D /* MedicalServiceView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2AFE8CD62C0298AC006DF51D /* MedicalServiceView.swift */; };
+		2AFE8CDA2C0298DA006DF51D /* ProfileView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2AFE8CD92C0298DA006DF51D /* ProfileView.swift */; };
+		2AFE8CDD2C029CD9006DF51D /* CardModels.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2AFE8CDC2C029CD9006DF51D /* CardModels.swift */; };
+		2AFE8CE02C029D12006DF51D /* CustomCard.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2AFE8CDF2C029D12006DF51D /* CustomCard.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -36,9 +48,12 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		2A1502BC2BFA4F2E00F4AD0D /* ColorExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ColorExtension.swift; sourceTree = "<group>"; };
+		2A1502C02BFA5B0800F4AD0D /* NavigationBar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NavigationBar.swift; sourceTree = "<group>"; };
+		2A3302A52BF9F9EB00AE8EE8 /* HomeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeView.swift; sourceTree = "<group>"; };
 		2A6E61D42BEF2897007AECEE /* FirstApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = FirstApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		2A6E61D72BEF2897007AECEE /* FirstAppApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirstAppApp.swift; sourceTree = "<group>"; };
-		2A6E61D92BEF2897007AECEE /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
+		2A6E61D92BEF2897007AECEE /* RegisterView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterView.swift; sourceTree = "<group>"; };
 		2A6E61DB2BEF2898007AECEE /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		2A6E61E42BEF2898007AECEE /* FirstAppTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = FirstAppTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		2A6E61E82BEF2898007AECEE /* FirstAppTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirstAppTests.swift; sourceTree = "<group>"; };
@@ -46,7 +61,15 @@
 		2A6E61F22BEF2898007AECEE /* FirstAppUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirstAppUITests.swift; sourceTree = "<group>"; };
 		2A6E61F42BEF2898007AECEE /* FirstAppUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirstAppUITestsLaunchTests.swift; sourceTree = "<group>"; };
 		2AB1775A2BEF51F000BDAB45 /* MapView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapView.swift; sourceTree = "<group>"; };
-		2AF590092BF02A6C00F5D1BC /* RegisterView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterView.swift; sourceTree = "<group>"; };
+		2ACE55B02C037A880055A5E3 /* PresenceItemWidget.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PresenceItemWidget.swift; sourceTree = "<group>"; };
+		2AF5343A2C02DD0C00464D4D /* AttendanceWidget.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AttendanceWidget.swift; sourceTree = "<group>"; };
+		2AF590092BF02A6C00F5D1BC /* LoginView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginView.swift; sourceTree = "<group>"; };
+		2AFE8CD02C0297EB006DF51D /* PresenceView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PresenceView.swift; sourceTree = "<group>"; };
+		2AFE8CD32C02981C006DF51D /* OperationScheduleView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OperationScheduleView.swift; sourceTree = "<group>"; };
+		2AFE8CD62C0298AC006DF51D /* MedicalServiceView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MedicalServiceView.swift; sourceTree = "<group>"; };
+		2AFE8CD92C0298DA006DF51D /* ProfileView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileView.swift; sourceTree = "<group>"; };
+		2AFE8CDC2C029CD9006DF51D /* CardModels.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardModels.swift; sourceTree = "<group>"; };
+		2AFE8CDF2C029D12006DF51D /* CustomCard.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomCard.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -55,6 +78,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				2AB177572BEF455400BDAB45 /* Inject in Frameworks */,
+				2ABF26872BF08A0300E167F2 /* SwiftSVG in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -98,11 +122,18 @@
 		2A6E61D62BEF2897007AECEE /* FirstApp */ = {
 			isa = PBXGroup;
 			children = (
+				2AFE8CD82C0298C8006DF51D /* Profile */,
+				2AFE8CD52C029899006DF51D /* MedicalService */,
+				2AFE8CD22C02980C006DF51D /* Operation */,
+				2AFE8CCF2C0297CC006DF51D /* Presence */,
+				2AFE8CCE2C0297B1006DF51D /* Home */,
 				2A6E61D72BEF2897007AECEE /* FirstAppApp.swift */,
-				2A6E61D92BEF2897007AECEE /* ContentView.swift */,
+				2A6E61D92BEF2897007AECEE /* RegisterView.swift */,
 				2A6E61DB2BEF2898007AECEE /* Assets.xcassets */,
 				2AB1775A2BEF51F000BDAB45 /* MapView.swift */,
-				2AF590092BF02A6C00F5D1BC /* RegisterView.swift */,
+				2AF590092BF02A6C00F5D1BC /* LoginView.swift */,
+				2A1502BC2BFA4F2E00F4AD0D /* ColorExtension.swift */,
+				2A1502C02BFA5B0800F4AD0D /* NavigationBar.swift */,
 			);
 			path = FirstApp;
 			sourceTree = "<group>";
@@ -124,6 +155,74 @@
 			path = FirstAppUITests;
 			sourceTree = "<group>";
 		};
+		2ACE55AF2C037A750055A5E3 /* widgets */ = {
+			isa = PBXGroup;
+			children = (
+				2ACE55B02C037A880055A5E3 /* PresenceItemWidget.swift */,
+			);
+			path = widgets;
+			sourceTree = "<group>";
+		};
+		2AFE8CCE2C0297B1006DF51D /* Home */ = {
+			isa = PBXGroup;
+			children = (
+				2AFE8CDE2C029CFC006DF51D /* CustomWidget */,
+				2AFE8CDB2C029CC7006DF51D /* Models */,
+				2A3302A52BF9F9EB00AE8EE8 /* HomeView.swift */,
+			);
+			path = Home;
+			sourceTree = "<group>";
+		};
+		2AFE8CCF2C0297CC006DF51D /* Presence */ = {
+			isa = PBXGroup;
+			children = (
+				2ACE55AF2C037A750055A5E3 /* widgets */,
+				2AFE8CD02C0297EB006DF51D /* PresenceView.swift */,
+			);
+			path = Presence;
+			sourceTree = "<group>";
+		};
+		2AFE8CD22C02980C006DF51D /* Operation */ = {
+			isa = PBXGroup;
+			children = (
+				2AFE8CD32C02981C006DF51D /* OperationScheduleView.swift */,
+			);
+			path = Operation;
+			sourceTree = "<group>";
+		};
+		2AFE8CD52C029899006DF51D /* MedicalService */ = {
+			isa = PBXGroup;
+			children = (
+				2AFE8CD62C0298AC006DF51D /* MedicalServiceView.swift */,
+			);
+			path = MedicalService;
+			sourceTree = "<group>";
+		};
+		2AFE8CD82C0298C8006DF51D /* Profile */ = {
+			isa = PBXGroup;
+			children = (
+				2AFE8CD92C0298DA006DF51D /* ProfileView.swift */,
+			);
+			path = Profile;
+			sourceTree = "<group>";
+		};
+		2AFE8CDB2C029CC7006DF51D /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				2AFE8CDC2C029CD9006DF51D /* CardModels.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		2AFE8CDE2C029CFC006DF51D /* CustomWidget */ = {
+			isa = PBXGroup;
+			children = (
+				2AFE8CDF2C029D12006DF51D /* CustomCard.swift */,
+				2AF5343A2C02DD0C00464D4D /* AttendanceWidget.swift */,
+			);
+			path = CustomWidget;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -142,6 +241,7 @@
 			name = FirstApp;
 			packageProductDependencies = (
 				2AB177562BEF455400BDAB45 /* Inject */,
+				2ABF26862BF08A0300E167F2 /* SwiftSVG */,
 			);
 			productName = FirstApp;
 			productReference = 2A6E61D42BEF2897007AECEE /* FirstApp.app */;
@@ -217,6 +317,7 @@
 			mainGroup = 2A6E61CB2BEF2897007AECEE;
 			packageReferences = (
 				2AB177552BEF455400BDAB45 /* XCRemoteSwiftPackageReference "Inject" */,
+				2ABF26852BF08A0300E167F2 /* XCRemoteSwiftPackageReference "SwiftSVG" */,
 			);
 			productRefGroup = 2A6E61D52BEF2897007AECEE /* Products */;
 			projectDirPath = "";
@@ -259,9 +360,20 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				2A6E61DA2BEF2897007AECEE /* ContentView.swift in Sources */,
-				2AF5900A2BF02A6C00F5D1BC /* RegisterView.swift in Sources */,
+				2AFE8CE02C029D12006DF51D /* CustomCard.swift in Sources */,
+				2A6E61DA2BEF2897007AECEE /* RegisterView.swift in Sources */,
+				2AFE8CDD2C029CD9006DF51D /* CardModels.swift in Sources */,
+				2AF5900A2BF02A6C00F5D1BC /* LoginView.swift in Sources */,
 				2AB1775B2BEF51F000BDAB45 /* MapView.swift in Sources */,
+				2ACE55B12C037A880055A5E3 /* PresenceItemWidget.swift in Sources */,
+				2A1502BD2BFA4F2E00F4AD0D /* ColorExtension.swift in Sources */,
+				2A1502C12BFA5B0800F4AD0D /* NavigationBar.swift in Sources */,
+				2AFE8CD12C0297EB006DF51D /* PresenceView.swift in Sources */,
+				2AFE8CD72C0298AC006DF51D /* MedicalServiceView.swift in Sources */,
+				2A3302A62BF9F9EB00AE8EE8 /* HomeView.swift in Sources */,
+				2AF5343B2C02DD0C00464D4D /* AttendanceWidget.swift in Sources */,
+				2AFE8CD42C02981C006DF51D /* OperationScheduleView.swift in Sources */,
+				2AFE8CDA2C0298DA006DF51D /* ProfileView.swift in Sources */,
 				2A6E61D82BEF2897007AECEE /* FirstAppApp.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -603,6 +715,14 @@
 				minimumVersion = 1.5.0;
 			};
 		};
+		2ABF26852BF08A0300E167F2 /* XCRemoteSwiftPackageReference "SwiftSVG" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/mchoe/SwiftSVG";
+			requirement = {
+				branch = master;
+				kind = branch;
+			};
+		};
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
@@ -610,6 +730,11 @@
 			isa = XCSwiftPackageProductDependency;
 			package = 2AB177552BEF455400BDAB45 /* XCRemoteSwiftPackageReference "Inject" */;
 			productName = Inject;
+		};
+		2ABF26862BF08A0300E167F2 /* SwiftSVG */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 2ABF26852BF08A0300E167F2 /* XCRemoteSwiftPackageReference "SwiftSVG" */;
+			productName = SwiftSVG;
 		};
 /* End XCSwiftPackageProductDependency section */
 	};

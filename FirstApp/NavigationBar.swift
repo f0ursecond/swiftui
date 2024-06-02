@@ -9,10 +9,28 @@ import SwiftUI
 
 struct NavigationBar: View {
     var body: some View {
-        Text(/*@START_MENU_TOKEN@*/"Hello, World!"/*@END_MENU_TOKEN@*/)
-    }
-}
+        TabView {
+            HomeView()
+                .tabItem {
+                    Label("Home", systemImage: "house")
+                }
+            PresenceView()
+                .tabItem {
+                    Label("Presensi", systemImage: "person.fill.checkmark")
+                }
+            OperationScheduleView()
+                .tabItem {
+                    Label("J.Operasi", systemImage: "calendar")
+                }
+            MedicalServiceView()
+                .tabItem {
+                    Label("Jasa Medis", systemImage: "cross.case.fill")
+                }
+            ProfileView()
+                .tabItem {
+                    Label("Profile", systemImage: "person.circle")
+                }
 
-#Preview {
-    NavigationBar()
+        }.accentColor(.white)
+    }
 }
