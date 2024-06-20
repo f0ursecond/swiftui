@@ -9,6 +9,8 @@ import SwiftUI
 
 @main
 struct FirstAppApp: App {
+    @StateObject var network = Network()
+
     init() {
         let appearance = UITabBarAppearance()
         appearance.backgroundColor = UIColor.white
@@ -30,7 +32,7 @@ struct FirstAppApp: App {
 
     var body: some Scene {
         WindowGroup {
-            NavigationBar()
+            NavigationBar().environmentObject(network)
         }
     }
 }

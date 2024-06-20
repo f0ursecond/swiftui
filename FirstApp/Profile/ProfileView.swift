@@ -31,7 +31,7 @@ struct ProfileView: View {
                     .renderingMode(.template)
                     .foregroundColor(.black)
                     .frame(width: 20, height: 20)
-            }).padding(.top, 12)
+            }).padding(.top, 6)
             Divider()
                 .padding(.bottom, 4)
 
@@ -142,8 +142,7 @@ struct ProfileView: View {
 
             Spacer()
         })
-        .padding(.horizontal, 24)
-        
+        .padding(.horizontal, 24).padding(.vertical)
     }
 }
 

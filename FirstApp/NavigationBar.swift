@@ -8,6 +8,9 @@
 import SwiftUI
 
 struct NavigationBar: View {
+    @StateObject private var network = Network()
+    @StateObject private var medicalServiceRepository = MedicalServiceRepository()
+
     var body: some View {
         TabView {
             HomeView()
@@ -22,7 +25,7 @@ struct NavigationBar: View {
                 .tabItem {
                     Label("J.Operasi", systemImage: "calendar")
                 }
-            MedicalServiceView()
+            MedicalServiceView().environmentObject(medicalServiceRepository)
                 .tabItem {
                     Label("Jasa Medis", systemImage: "cross.case.fill")
                 }

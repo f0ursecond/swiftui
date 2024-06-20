@@ -66,7 +66,7 @@ struct HomeView: View {
                                 CustomCard(data: CardModels(
                                     color: Color(hex: "#57BE83"),
                                     imagePath: "jadwalOperasi",
-                                    title: "Jadwal\nOperasia",
+                                    title: "Jadwal\nOperasi",
                                     patientCount: 10
                                 )).padding(.bottom, 12)
 
