@@ -8,7 +8,7 @@
 import SwiftUI
 
 struct OperationScheduleView: View {
-    @EnvironmentObject var network: Network
+    @EnvironmentObject var data: UserRepository
 
     var body: some View {
         VStack(content: {
@@ -21,14 +21,14 @@ struct OperationScheduleView: View {
             Divider()
                 .padding(.bottom, 4)
             ZStack {
-                if network.isLoading {
+                if data.isLoading {
                     VStack {
                         Spacer()
                         ProgressView()
                             .padding()
                         Spacer()
                     }
-                } else if let errorMessage = network.errorMessage {
+                } else if let errorMessage = data.errorMessage {
                     VStack {
                         Spacer()
                         Text(errorMessage)
@@ -37,7 +37,7 @@ struct OperationScheduleView: View {
                         Spacer()
                     }
                 } else {
-                    if network.users.isEmpty {
+                    if data.users.isEmpty {
                         VStack(content: {
                             Spacer()
                             Text("Data Is Empty")
@@ -46,7 +46,7 @@ struct OperationScheduleView: View {
                     } else {
                         ScrollView {
                             VStack(alignment: .leading) {
-                                ForEach(network.users) { user in
+                                ForEach(data.users) { user in
                                     HStack(alignment: .top) {
                                         Text("\(user.id)")
 
@@ -71,7 +71,7 @@ struct OperationScheduleView: View {
             }
             .frame(maxWidth: .infinity, maxHeight: .infinity)
         }).onAppear {
-            self.network.getUsersWithAlamofire()
+            self.data.getAllUsers()
         }.padding(.horizontal, 24).padding(.vertical)
     }
 }

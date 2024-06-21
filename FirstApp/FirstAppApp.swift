@@ -9,7 +9,8 @@ import SwiftUI
 
 @main
 struct FirstAppApp: App {
-    @StateObject var network = Network()
+    @StateObject var userRepository = UserRepository()
+    @StateObject var authRepository = AuthRepository()
 
     init() {
         let appearance = UITabBarAppearance()
@@ -32,7 +33,8 @@ struct FirstAppApp: App {
 
     var body: some Scene {
         WindowGroup {
-            NavigationBar().environmentObject(network)
+//            NavigationBar().environmentObject(userRepository)
+            LoginView().environmentObject(authRepository)
         }
     }
 }

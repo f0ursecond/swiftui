@@ -47,12 +47,14 @@ struct MedicalServiceView: View {
                         ScrollView(content: {
                             VStack(alignment: .leading, content: {
                                 ForEach(repository.medicalServices) { data in
+                                    let id = Int(data.id) ?? 0
                                     HStack(alignment: .top) {
                                         Text("\(data.id)")
 
                                         VStack(alignment: .leading) {
                                             Text(data.name)
                                                 .bold()
+                                                .foregroundStyle(id % 2 == 0 ? .red : .black)
                                         }
                                     }
                                     .frame(width: 300, alignment: .leading)
