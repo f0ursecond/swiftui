@@ -8,6 +8,7 @@
 import SwiftUI
 
 struct AttendanceWidget: View {
+    @State private var isPresence = false
     var body: some View {
         RoundedRectangle(cornerSize: CGSize(width: 10, height: 10))
             .fill(Color(hex: "#F5F5F5"))
@@ -25,16 +26,16 @@ struct AttendanceWidget: View {
                     }).padding(.bottom, 12)
 
                     Button(action: {
-                        print("clicked")
+                        self.isPresence = !self.isPresence
                     }) {
-                        Text("Presensi Masuk")
+                        Text("Presensi \(self.isPresence ? "Keluar" : "Masuk")")
                             .frame(maxWidth: /*@START_MENU_TOKEN@*/ .infinity/*@END_MENU_TOKEN@*/)
                             .padding(.all, 12)
                             .fontWeight(.regular)
                             .foregroundColor(.white)
                     }
                     .buttonStyle(PlainButtonStyle())
-                    .background(Color(hex: "#29166F"))
+                    .background(Color(hex: self.isPresence ? "#FF0000" : "#29166F"))
                     .cornerRadius(50)
                     .padding(.bottom, 12)
 

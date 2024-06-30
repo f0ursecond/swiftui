@@ -9,31 +9,38 @@ import SwiftUI
 
 struct NavigationBar: View {
     @StateObject private var userRepository = UserRepository()
+    @StateObject private var authRepository = AuthRepository()
     @StateObject private var medicalServiceRepository = MedicalServiceRepository()
 
     var body: some View {
-        TabView {
-            HomeView()
-                .tabItem {
-                    Label("Home", systemImage: "house")
-                }
-            PresenceView()
-                .tabItem {
-                    Label("Presensi", systemImage: "person.fill.checkmark")
-                }
-            OperationScheduleView().environmentObject(userRepository)
-                .tabItem {
-                    Label("J.Operasi", systemImage: "calendar")
-                }
-            MedicalServiceView().environmentObject(medicalServiceRepository)
-                .tabItem {
-                    Label("Jasa Medis", systemImage: "cross.case.fill")
-                }
-            ProfileView()
-                .tabItem {
-                    Label("Profile", systemImage: "person.circle")
-                }
+        NavigationStack {
+            TabView {
+                HomeView()
+                    .tabItem {
+                        Label("Home", systemImage: "house")
+                    }
+                PresenceView()
+                    .tabItem {
+                        Label("Presensi", systemImage: "person.fill.checkmark")
+                    }
+                OperationScheduleView().environmentObject(userRepository)
+                    .tabItem {
+                        Label("J.Operasi", systemImage: "calendar")
+                    }
+                MedicalServiceView().environmentObject(medicalServiceRepository)
+                    .tabItem {
+                        Label("Jasa Medis", systemImage: "cross.case.fill")
+                    }
+                ProfileView(isLoggedOut: $authRepository.isLoggedOut).environmentObject(authRepository)
+                    .tabItem {
+                        Label("Profile", systemImage: "person.circle")
+                    }
+            }
+            .accentColor(.white)
+            .navigationDestination(isPresented: $authRepository.isLoggedOut) {
+                AuthView()
+            }
 
-        }.accentColor(.white)
+        }.navigationBarHidden(true)
     }
 }

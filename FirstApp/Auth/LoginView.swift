@@ -9,6 +9,7 @@ import AlertToast
 import SwiftUI
 
 struct LoginView: View {
+    @Binding var currentShowingView: String
     @EnvironmentObject var authRepository: AuthRepository
 
     @State private var username: String = ""
@@ -21,8 +22,13 @@ struct LoginView: View {
     @Environment(\.presentationMode) var presentationMode: Binding<PresentationMode>
 
     var body: some View {
-        NavigationView {
+        NavigationStack {
             VStack(alignment: .leading, content: {
+                Text("Welcome Back")
+                    .font(.largeTitle)
+                    .fontWeight(/*@START_MENU_TOKEN@*/ .bold/*@END_MENU_TOKEN@*/)
+                    .padding(.bottom, 6)
+
                 Text("Masukan username dan password untuk menggunakan aplikasi ini")
                     .font(.system(size: 14))
                     .padding(.vertical, 8)
@@ -30,17 +36,39 @@ struct LoginView: View {
                 TextField(
                     "Username",
                     text: $username
-                ).disableAutocorrection(true)
-                    .padding(.bottom, 10)
-                    .textFieldStyle(.roundedBorder)
-                    .autocapitalization(.none)
+                )
+                .foregroundColor(.black)
+                .disableAutocorrection(true)
+                .overlay(alignment: .trailing, content: {
+                    ZStack {
+                        Image(systemName: "person.fill")
+                            .foregroundColor(.black)
+                    }
+                })
+                .autocapitalization(.none)
+                .padding(.all, 12)
+                .background(
+                    RoundedRectangle(cornerRadius: 10)
+                        .stroke(Color.black, lineWidth: 1)
+                )
 
                 SecureField(
                     "Password",
                     text: $password
                 )
-                .textFieldStyle(.roundedBorder)
-                .autocapitalization(/*@START_MENU_TOKEN@*/ .none/*@END_MENU_TOKEN@*/)
+                .overlay(alignment: .trailing, content: {
+                    ZStack {
+                        Image(systemName: "lock.fill")
+                            .foregroundColor(.black)
+                    }
+                })
+                .foregroundColor(.black)
+                .autocapitalization(.none)
+                .padding(.all, 12)
+                .background(
+                    RoundedRectangle(cornerRadius: 10)
+                        .stroke(Color.black, lineWidth: 1)
+                )
                 .padding(.bottom, 10)
 
                 Button(action: {
@@ -62,29 +90,45 @@ struct LoginView: View {
                 }
                 .buttonStyle(PlainButtonStyle())
                 .background(Color(hex: "#29166F"))
-                .cornerRadius(50)
+                .cornerRadius(10)
+                .padding(.bottom, 10)
+
+                HStack(content: {
+                    Spacer()
+                    Text("Don't have an account?")
+                        .font(.caption)
+                    Button {
+                        withAnimation {
+                            self.currentShowingView = "signup"
+                        }
+                    } label: {
+                        Text("Register")
+                            .font(.caption)
+                            .foregroundColor(.blue)
+                    }
+                })
+
                 Spacer()
-                NavigationLink(
-                    destination: NavigationBar().navigationBarBackButtonHidden(true),
-                    isActive: $authRepository.isLoggedIn,
-                    label: { EmptyView() }
-                )
-                .hidden()
             })
             .foregroundColor(Color.black.opacity(0.7))
             .padding()
-            .navigationTitle("Masuk")
+            .navigationDestination(isPresented: $authRepository.isLoggedIn) {
+                NavigationBar().navigationBarBackButtonHidden(true)
+            }
+            .toolbar(.hidden)
 
-        }.toast(isPresenting: $showToast, duration: 10, tapToDismiss: true) {
+        }.toast(isPresenting: $showToast, duration: 0, tapToDismiss: true) {
             if let errorMessage = authRepository.errorMessage {
                 return AlertToast(
                     displayMode: .banner(.slide),
-                    type: .error(.red), title: "Error",
+                    type: .error(.red),
+                    title: "Oppss!!!",
                     subTitle: "Error \(authRepository.statusCode!) | \(errorMessage)"
                 )
             } else if let token = authRepository.token {
                 return AlertToast(
-                    displayMode: .banner(.pop), type: .complete(.green),
+                    displayMode: .banner(.slide),
+                    type: .complete(.green),
                     title: "Login Success",
                     subTitle: "Welcome \(username)"
                 )
@@ -93,14 +137,15 @@ struct LoginView: View {
                     displayMode: .banner(.slide),
                     type: .regular,
                     title: "Loading",
-                    subTitle: "Please Wait A Moment"
+                    subTitle: "Please Wait"
                 )
             }
         }.toast(isPresenting: $showValidator) {
             AlertToast(
                 displayMode: .banner(.slide),
                 type: .error(.red),
-                title: "Please Fill The Form"
+                title: "Oppss!!!",
+                subTitle: "All fields must be filled to log in"
             )
         }
     }

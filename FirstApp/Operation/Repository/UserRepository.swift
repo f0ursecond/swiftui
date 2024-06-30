@@ -17,7 +17,7 @@ class UserRepository: ObservableObject {
         self.isLoading = true
         self.errorMessage = nil
 
-        AF.request(BaseUrl.urlDev, method: .get, parameters: nil, encoding: URLEncoding.default, headers: nil, interceptor: nil)
+        AF.request("https://jsonplaceholder.typicode.com/users", method: .get, parameters: nil, encoding: URLEncoding.default, headers: nil, interceptor: nil)
             .response { resp in
                 switch resp.result {
                     case .success(let data):

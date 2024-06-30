@@ -5,15 +5,16 @@
 //  Created by Alif Zulfanur on 19/05/24.
 //
 
-import SwiftUI
 import Inject
+import SwiftUI
 
 struct HomeView: View {
     @ObserveInjection var inject
     @State private var counter: Int = 0
+    let token = UserDefaults.standard.string(forKey: "token")
 
     var body: some View {
-        NavigationView(content: {
+        NavigationStack {
             ZStack {
                 ScrollView(showsIndicators: false, content: {
                     VStack(alignment: .leading, content: {
@@ -80,6 +81,13 @@ struct HomeView: View {
                 })
 
             }.edgesIgnoringSafeArea(.top)
-        })
+        }.onAppear {
+            if token != nil {
+                print(token)
+            } else {
+                print("token null")
+            }
+
+        }.navigationBarHidden(true)
     }
 }

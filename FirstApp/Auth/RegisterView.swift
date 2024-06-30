@@ -8,6 +8,8 @@
 import SwiftUI
 
 struct RegisterView: View {
+    @Binding var currentShowingView: String
+
     @State private var username: String = ""
     @State private var email: String = ""
     @State private var password: String = ""
@@ -30,21 +32,56 @@ struct RegisterView: View {
                 TextField(
                     "Username",
                     text: $username
-                ).disableAutocorrection(true)
-                    .padding(.bottom, 10)
-                    .textFieldStyle(.roundedBorder)
-                    .autocapitalization(.none)
+                )
+                .foregroundColor(.black)
+                .disableAutocorrection(true)
+                .overlay(alignment: .trailing, content: {
+                    ZStack {
+                        Image(systemName: "person.fill")
+                            .foregroundColor(.black)
+                    }
+                })
+                .autocapitalization(.none)
+                .padding(.all, 12)
+                .background(
+                    RoundedRectangle(cornerRadius: 10)
+                        .stroke(Color.black, lineWidth: 1)
+                )
 
                 TextField(
                     "Email",
                     text: $email
-                ).padding(.bottom, 15).textFieldStyle(.roundedBorder).autocapitalization(/*@START_MENU_TOKEN@*/ .none/*@END_MENU_TOKEN@*/)
+                )
+                .foregroundColor(.black)
+                .disableAutocorrection(true)
+                .overlay(alignment: .trailing, content: {
+                    ZStack {
+                        Image(systemName: "envelope.fill")
+                            .foregroundColor(.black)
+                    }
+                })
+                .autocapitalization(.none)
+                .padding(.all, 12)
+                .background(
+                    RoundedRectangle(cornerRadius: 10)
+                        .stroke(Color.black, lineWidth: 1)
+                )
 
                 SecureField("Password", text: $password)
-                    .disableAutocorrection(/*@START_MENU_TOKEN@*/false/*@END_MENU_TOKEN@*/)
-                    .padding(.bottom, 10)
-                    .textFieldStyle(.roundedBorder)
-                    .autocapitalization(/*@START_MENU_TOKEN@*/ .none/*@END_MENU_TOKEN@*/)
+                    .foregroundColor(.black)
+                    .disableAutocorrection(true)
+                    .overlay(alignment: .trailing, content: {
+                        ZStack {
+                            Image(systemName: "lock.fill")
+                                .foregroundColor(.black)
+                        }
+                    })
+                    .autocapitalization(.none)
+                    .padding(.all, 12)
+                    .background(
+                        RoundedRectangle(cornerRadius: 10)
+                            .stroke(Color.black, lineWidth: 1)
+                    )
 
                 Button(action: {
                     self.showAlertSuccess = false
@@ -57,28 +94,35 @@ struct RegisterView: View {
                 }) {
                     Text("Register")
                         .frame(maxWidth: /*@START_MENU_TOKEN@*/ .infinity/*@END_MENU_TOKEN@*/)
-                        .padding(.all, 8)
+                        .padding(.all, 12)
                         .fontWeight(.regular)
-                        .font(.system(size: 14))
                         .foregroundColor(.white)
-                        .cornerRadius(12)
                 }
+                .buttonStyle(PlainButtonStyle())
+                .background(Color(hex: "#29166F"))
+                .cornerRadius(10)
+                .padding(.bottom, 10)
+
                 HStack(content: {
                     Spacer()
                     Text("Already Have An Account ?").font(.system(size: 12))
                     Button(action: {
-                        isLoginButtonClicked = true
+                        withAnimation {
+                            self.currentShowingView = "login"
+                        }
                     }) {
                         Text("Login").font(.system(size: 12))
                     }
                 }).padding(.vertical, 8)
 
-                NavigationLink(
-                    destination: HomeView().navigationBarBackButtonHidden(true),
-                    isActive: self.$isLoginButtonClicked,
-                    label: { EmptyView() }
-                )
-                .hidden()
+//                NavigationLink(
+//                    destination: HomeView().navigationBarBackButtonHidden(true),
+//                    isActive: self.$isLoginButtonClicked,
+//                    label: { EmptyView() }
+//                )
+//                .hidden()
+
+                Spacer()
 
             })
             .padding()

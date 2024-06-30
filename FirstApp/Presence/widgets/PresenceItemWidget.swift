@@ -9,6 +9,7 @@ import SwiftUI
 
 struct PresenceItemWidget: View {
     var data: ResPresence
+    let onTap: () -> Void
     var body: some View {
         RoundedRectangle(cornerSize: CGSize(width: 10, height: 10))
             .fill(.gray.opacity(0.1))
@@ -60,6 +61,9 @@ struct PresenceItemWidget: View {
                     }).padding(.horizontal, 10)
                 })
             })
+            .onTapGesture {
+                onTap()
+            }
     }
 }
 

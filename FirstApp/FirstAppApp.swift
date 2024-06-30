@@ -11,6 +11,7 @@ import SwiftUI
 struct FirstAppApp: App {
     @StateObject var userRepository = UserRepository()
     @StateObject var authRepository = AuthRepository()
+    let token = UserDefaults.standard.string(forKey: "token")
 
     init() {
         let appearance = UITabBarAppearance()
@@ -33,8 +34,11 @@ struct FirstAppApp: App {
 
     var body: some Scene {
         WindowGroup {
-//            NavigationBar().environmentObject(userRepository)
-            LoginView().environmentObject(authRepository)
+            if token != nil {
+                NavigationBar().environmentObject(authRepository)
+            } else {
+                AuthView()
+            }
         }
     }
 }

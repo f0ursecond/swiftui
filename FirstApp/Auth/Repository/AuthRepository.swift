@@ -7,6 +7,7 @@
 
 import Alamofire
 import Foundation
+import SwiftyJSON
 
 class AuthRepository: ObservableObject {
     @Published var isLoading = false
@@ -14,11 +15,13 @@ class AuthRepository: ObservableObject {
     @Published var token: String? {
         didSet {
             self.isLoggedIn = self.token != nil && !self.token!.isEmpty
+            self.isLoggedOut = self.token == nil && self.token!.isEmpty
         }
     }
 
     @Published var statusCode: Int? = nil
     @Published var isLoggedIn = false
+    @Published var isLoggedOut = false
 
     func login(username: String, password: String) {
         let url = "https://belajar-backend-okev.vercel.app/api/login"
@@ -45,28 +48,35 @@ class AuthRepository: ObservableObject {
                     switch resp.result {
                     case .success(let data):
                         do {
-                            if let json = try JSONSerialization.jsonObject(with: data!, options: []) as? [String: Any], let token = json["token"] as? String {
-                                self.token = token
-                                self.errorMessage = nil
-                            } else if let json = try JSONSerialization.jsonObject(with: data!, options: []) as? [String: Any], let msg = json["msg"] as? String {
-                                self.errorMessage = "\(msg)"
+                            let json = try JSON(data: data!)
+                            
+                            if let tokenResponse = json["token"].string {
+                                self.token = tokenResponse
+                                UserDefaults.standard.setValue(tokenResponse, forKey: "token")
+                            } else if let msg = json["msg"].string {
+                                self.errorMessage = msg
+                                self.statusCode = resp.response?.statusCode
+                            } else {
+                                self.errorMessage = "Error response format"
                                 self.statusCode = resp.response?.statusCode
                             }
+                            
                         } catch {
                             self.errorMessage = "\(error)"
                         }
                     case .failure(let error):
                         if let data = resp.data {
                             do {
-                                if let json = try JSONSerialization.jsonObject(with: data, options: []) as? [String: Any],
-                                   let message = json["msg"] as? String
-                                {
+                                let json = try JSON(data: data)
+                                
+                                if let message = json["msg"].string {
                                     self.errorMessage = message
                                     self.statusCode = resp.response?.statusCode
                                 } else {
-                                    self.errorMessage = "An error occurred"
+                                    self.errorMessage = "\(error)"
                                     self.statusCode = resp.response?.statusCode
                                 }
+                                
                             } catch {
                                 self.errorMessage = "\(error)"
                                 self.statusCode = resp.response?.statusCode

@@ -5,11 +5,14 @@
 //  Created by Alif Zulfanur on 26/05/24.
 //
 
+import AlertToast
 import Inject
 import SwiftUI
 
 struct ProfileView: View {
-    @ObserveInjection var inject
+    @EnvironmentObject var authRepository: AuthRepository
+    @Binding var isLoggedOut: Bool
+
     let dates = ["12-16 September 2024", "17-23 Oktober 2024", "23-30 Desember 2024"]
     let practiceSchedules: [PracticeSchedule] = [
         PracticeSchedule(day: "Senin", time: "20:00"),
@@ -18,6 +21,7 @@ struct ProfileView: View {
         PracticeSchedule(day: "Kamis", time: "19:00"),
         PracticeSchedule(day: "Jumat", time: "20:00")
     ]
+    @State private var isLogoutClicked: Bool = false
 
     var body: some View {
         VStack(content: {
@@ -31,6 +35,13 @@ struct ProfileView: View {
                     .renderingMode(.template)
                     .foregroundColor(.black)
                     .frame(width: 20, height: 20)
+                    .onTapGesture {
+                        UserDefaults.standard.removeObject(forKey: "token")
+                        authRepository.isLoggedIn = false
+                        isLoggedOut = true
+                        authRepository.isLoggedOut = true
+                        self.isLogoutClicked = true
+                    }
             }).padding(.top, 6)
             Divider()
                 .padding(.bottom, 4)
@@ -141,8 +152,16 @@ struct ProfileView: View {
             .accentColor(Color(.black).opacity(10))
 
             Spacer()
+
         })
         .padding(.horizontal, 24).padding(.vertical)
+        .toast(isPresenting: $isLogoutClicked, duration: 5, tapToDismiss: true) {
+            AlertToast(
+                displayMode: .banner(.pop), type: .complete(.green),
+                title: "Selamat",
+                subTitle: "Logout Sukses"
+            )
+        }
     }
 }
 

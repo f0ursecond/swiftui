@@ -10,6 +10,7 @@
 		2A1502BD2BFA4F2E00F4AD0D /* ColorExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A1502BC2BFA4F2E00F4AD0D /* ColorExtension.swift */; };
 		2A1502C12BFA5B0800F4AD0D /* NavigationBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A1502C02BFA5B0800F4AD0D /* NavigationBar.swift */; };
 		2A2D99A22C241818005C895A /* UserRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A2D99A12C241818005C895A /* UserRepository.swift */; };
+		2A30D9762C2E65DD00B520AD /* AuthView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A30D9752C2E65DD00B520AD /* AuthView.swift */; };
 		2A3302A62BF9F9EB00AE8EE8 /* HomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A3302A52BF9F9EB00AE8EE8 /* HomeView.swift */; };
 		2A3EDE2B2C25678C001DCBC2 /* Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A3EDE2A2C25678C001DCBC2 /* Extensions.swift */; };
 		2A44B0F82C21A65E007CA6D7 /* Alamofire in Frameworks */ = {isa = PBXBuildFile; productRef = 2A44B0F72C21A65E007CA6D7 /* Alamofire */; };
@@ -17,15 +18,18 @@
 		2A44B0FD2C21A6E4007CA6D7 /* BaseUrl.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A44B0FC2C21A6E4007CA6D7 /* BaseUrl.swift */; };
 		2A44B1012C21BA70007CA6D7 /* ResMedicalService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A44B1002C21BA70007CA6D7 /* ResMedicalService.swift */; };
 		2A44B1032C21BB3C007CA6D7 /* MedicalServiceRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A44B1022C21BB3C007CA6D7 /* MedicalServiceRepository.swift */; };
+		2A50DB232C25B0E2008A7F26 /* SwiftyJSON in Frameworks */ = {isa = PBXBuildFile; productRef = 2A50DB222C25B0E2008A7F26 /* SwiftyJSON */; };
 		2A6E61D82BEF2897007AECEE /* FirstAppApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A6E61D72BEF2897007AECEE /* FirstAppApp.swift */; };
 		2A6E61DA2BEF2897007AECEE /* RegisterView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A6E61D92BEF2897007AECEE /* RegisterView.swift */; };
 		2A6E61DC2BEF2898007AECEE /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 2A6E61DB2BEF2898007AECEE /* Assets.xcassets */; };
 		2A6E61E92BEF2898007AECEE /* FirstAppTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A6E61E82BEF2898007AECEE /* FirstAppTests.swift */; };
 		2A6E61F32BEF2898007AECEE /* FirstAppUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A6E61F22BEF2898007AECEE /* FirstAppUITests.swift */; };
 		2A6E61F52BEF2898007AECEE /* FirstAppUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A6E61F42BEF2898007AECEE /* FirstAppUITestsLaunchTests.swift */; };
+		2A717D252C2E9E2500C5B40B /* PresenceDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A717D242C2E9E2500C5B40B /* PresenceDetailView.swift */; };
 		2A76F7652C245F5A0075C1BD /* AlertToast in Frameworks */ = {isa = PBXBuildFile; productRef = 2A76F7642C245F5A0075C1BD /* AlertToast */; };
 		2A76F7722C2464550075C1BD /* AuthRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A76F7712C2464550075C1BD /* AuthRepository.swift */; };
 		2A76F7752C24706E0075C1BD /* ResLogin.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A76F7742C24706E0075C1BD /* ResLogin.swift */; };
+		2A9E76052C2BBD6700A55BAD /* PresenceAllView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A9E76042C2BBD6700A55BAD /* PresenceAllView.swift */; };
 		2AB177572BEF455400BDAB45 /* Inject in Frameworks */ = {isa = PBXBuildFile; productRef = 2AB177562BEF455400BDAB45 /* Inject */; };
 		2AB1775B2BEF51F000BDAB45 /* MapView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2AB1775A2BEF51F000BDAB45 /* MapView.swift */; };
 		2ABF26872BF08A0300E167F2 /* SwiftSVG in Frameworks */ = {isa = PBXBuildFile; productRef = 2ABF26862BF08A0300E167F2 /* SwiftSVG */; };
@@ -62,6 +66,7 @@
 		2A1502BC2BFA4F2E00F4AD0D /* ColorExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ColorExtension.swift; sourceTree = "<group>"; };
 		2A1502C02BFA5B0800F4AD0D /* NavigationBar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NavigationBar.swift; sourceTree = "<group>"; };
 		2A2D99A12C241818005C895A /* UserRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserRepository.swift; sourceTree = "<group>"; };
+		2A30D9752C2E65DD00B520AD /* AuthView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthView.swift; sourceTree = "<group>"; };
 		2A3302A52BF9F9EB00AE8EE8 /* HomeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeView.swift; sourceTree = "<group>"; };
 		2A3EDE2A2C25678C001DCBC2 /* Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Extensions.swift; sourceTree = "<group>"; };
 		2A44B0FC2C21A6E4007CA6D7 /* BaseUrl.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseUrl.swift; sourceTree = "<group>"; };
@@ -76,8 +81,10 @@
 		2A6E61EE2BEF2898007AECEE /* FirstAppUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = FirstAppUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		2A6E61F22BEF2898007AECEE /* FirstAppUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirstAppUITests.swift; sourceTree = "<group>"; };
 		2A6E61F42BEF2898007AECEE /* FirstAppUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirstAppUITestsLaunchTests.swift; sourceTree = "<group>"; };
+		2A717D242C2E9E2500C5B40B /* PresenceDetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PresenceDetailView.swift; sourceTree = "<group>"; };
 		2A76F7712C2464550075C1BD /* AuthRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthRepository.swift; sourceTree = "<group>"; };
 		2A76F7742C24706E0075C1BD /* ResLogin.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResLogin.swift; sourceTree = "<group>"; };
+		2A9E76042C2BBD6700A55BAD /* PresenceAllView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PresenceAllView.swift; sourceTree = "<group>"; };
 		2AB1775A2BEF51F000BDAB45 /* MapView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapView.swift; sourceTree = "<group>"; };
 		2AC991A32C1C76C900AFB941 /* UserModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserModel.swift; sourceTree = "<group>"; };
 		2ACE55B02C037A880055A5E3 /* PresenceItemWidget.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PresenceItemWidget.swift; sourceTree = "<group>"; };
@@ -96,6 +103,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				2A50DB232C25B0E2008A7F26 /* SwiftyJSON in Frameworks */,
 				2A44B0F82C21A65E007CA6D7 /* Alamofire in Frameworks */,
 				2A44B0FA2C21A65E007CA6D7 /* AlamofireDynamic in Frameworks */,
 				2AB177572BEF455400BDAB45 /* Inject in Frameworks */,
@@ -184,7 +192,6 @@
 				2AFE8CCF2C0297CC006DF51D /* Presence */,
 				2AFE8CCE2C0297B1006DF51D /* Home */,
 				2A6E61D72BEF2897007AECEE /* FirstAppApp.swift */,
-				2A6E61D92BEF2897007AECEE /* RegisterView.swift */,
 				2A6E61DB2BEF2898007AECEE /* Assets.xcassets */,
 				2AB1775A2BEF51F000BDAB45 /* MapView.swift */,
 				2A1502BC2BFA4F2E00F4AD0D /* ColorExtension.swift */,
@@ -217,6 +224,8 @@
 				2A76F7702C2461430075C1BD /* Repository */,
 				2A76F76F2C24613B0075C1BD /* Models */,
 				2AF590092BF02A6C00F5D1BC /* LoginView.swift */,
+				2A6E61D92BEF2897007AECEE /* RegisterView.swift */,
+				2A30D9752C2E65DD00B520AD /* AuthView.swift */,
 			);
 			path = Auth;
 			sourceTree = "<group>";
@@ -268,6 +277,8 @@
 			children = (
 				2ACE55AF2C037A750055A5E3 /* widgets */,
 				2AFE8CD02C0297EB006DF51D /* PresenceView.swift */,
+				2A9E76042C2BBD6700A55BAD /* PresenceAllView.swift */,
+				2A717D242C2E9E2500C5B40B /* PresenceDetailView.swift */,
 			);
 			path = Presence;
 			sourceTree = "<group>";
@@ -339,6 +350,7 @@
 				2A44B0F72C21A65E007CA6D7 /* Alamofire */,
 				2A44B0F92C21A65E007CA6D7 /* AlamofireDynamic */,
 				2A76F7642C245F5A0075C1BD /* AlertToast */,
+				2A50DB222C25B0E2008A7F26 /* SwiftyJSON */,
 			);
 			productName = FirstApp;
 			productReference = 2A6E61D42BEF2897007AECEE /* FirstApp.app */;
@@ -417,6 +429,7 @@
 				2ABF26852BF08A0300E167F2 /* XCRemoteSwiftPackageReference "SwiftSVG" */,
 				2A44B0F62C21A65E007CA6D7 /* XCRemoteSwiftPackageReference "Alamofire" */,
 				2A76F7632C245F5A0075C1BD /* XCRemoteSwiftPackageReference "AlertToast" */,
+				2A50DB212C25B0E2008A7F26 /* XCRemoteSwiftPackageReference "SwiftyJSON" */,
 			);
 			productRefGroup = 2A6E61D52BEF2897007AECEE /* Products */;
 			projectDirPath = "";
@@ -460,6 +473,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				2A3EDE2B2C25678C001DCBC2 /* Extensions.swift in Sources */,
+				2A9E76052C2BBD6700A55BAD /* PresenceAllView.swift in Sources */,
 				2AFE8CE02C029D12006DF51D /* CustomCard.swift in Sources */,
 				2A44B1032C21BB3C007CA6D7 /* MedicalServiceRepository.swift in Sources */,
 				2A6E61DA2BEF2897007AECEE /* RegisterView.swift in Sources */,
@@ -474,6 +488,8 @@
 				2A44B1012C21BA70007CA6D7 /* ResMedicalService.swift in Sources */,
 				2AFE8CD12C0297EB006DF51D /* PresenceView.swift in Sources */,
 				2AFE8CD72C0298AC006DF51D /* MedicalServiceView.swift in Sources */,
+				2A717D252C2E9E2500C5B40B /* PresenceDetailView.swift in Sources */,
+				2A30D9762C2E65DD00B520AD /* AuthView.swift in Sources */,
 				2A3302A62BF9F9EB00AE8EE8 /* HomeView.swift in Sources */,
 				2AF5343B2C02DD0C00464D4D /* AttendanceWidget.swift in Sources */,
 				2A76F7752C24706E0075C1BD /* ResLogin.swift in Sources */,
@@ -822,6 +838,14 @@
 				minimumVersion = 5.9.1;
 			};
 		};
+		2A50DB212C25B0E2008A7F26 /* XCRemoteSwiftPackageReference "SwiftyJSON" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/SwiftyJSON/SwiftyJSON.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 5.0.2;
+			};
+		};
 		2A76F7632C245F5A0075C1BD /* XCRemoteSwiftPackageReference "AlertToast" */ = {
 			isa = XCRemoteSwiftPackageReference;
 			repositoryURL = "https://github.com/elai950/AlertToast";
@@ -858,6 +882,11 @@
 			isa = XCSwiftPackageProductDependency;
 			package = 2A44B0F62C21A65E007CA6D7 /* XCRemoteSwiftPackageReference "Alamofire" */;
 			productName = AlamofireDynamic;
+		};
+		2A50DB222C25B0E2008A7F26 /* SwiftyJSON */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 2A50DB212C25B0E2008A7F26 /* XCRemoteSwiftPackageReference "SwiftyJSON" */;
+			productName = SwiftyJSON;
 		};
 		2A76F7642C245F5A0075C1BD /* AlertToast */ = {
 			isa = XCSwiftPackageProductDependency;
